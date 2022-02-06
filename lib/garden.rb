@@ -1,4 +1,4 @@
-# Something is missing here
+require_relative './plant'
 
 class Garden
   attr_accessor :name
@@ -8,9 +8,7 @@ class Garden
   end
 
   def plants
-    Plant.all.select do |plant|
-      plant.garden == self
-    end
+    Plant.all.select { |plant| plant.garden == self }
   end
 end
 
